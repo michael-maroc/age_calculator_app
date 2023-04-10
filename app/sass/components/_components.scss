@@ -1,0 +1,30 @@
+@use "../base/typography" as *;
+@use "../base/colors" as *;
+@use "..//util/functions" as *;
+@use "..//util/breakpoints" as *;
+
+input {
+  font-size: rem(20);
+  font-weight: 800;
+  width: 100%;
+  border-radius: rem(6);
+  border: rem(1) solid $lightgrey;
+  padding:  rem(12) 0 rem(12) rem(12);
+  font-family: unset;
+
+  &::placeholder {
+    color: $smokegrey;
+  }
+
+  @include breakpoint-up(medium){
+    font-size: rem(36);
+  }
+
+  @include breakpoint-up(large){
+    font-size: $font-size;
+  }
+
+  @include breakpoint-up(xlarge){
+    font-size: rem(48);
+  }
+}

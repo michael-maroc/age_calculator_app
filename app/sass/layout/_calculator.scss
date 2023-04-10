@@ -1,0 +1,108 @@
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+@use "../util/functions" as *;
+@use "../util/breakpoints" as *;
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  max-width: em(320);
+  background-color: $white;
+  margin-top: rem(100);
+  margin-bottom: rem(100);
+  border-radius: rem(30) rem(30) rem(140) rem(30);
+  padding: rem(48) rem(24);
+  gap: 4rem;
+
+  @include breakpoint-up(medium){
+    gap: 5rem;
+    max-width: rem(600);
+    padding: rem(60);
+  }
+
+  @include breakpoint-up(large){
+    max-width: none;
+    width: em(800);
+    padding: rem(64);
+  }
+
+  @include breakpoint-up(xlarge){
+    width: 65em;
+    padding: rem(68);
+  }
+
+  &__form {
+    display: flex;
+    gap: 1rem;
+
+    @include breakpoint-up(medium){
+      gap: rem(32);
+    }
+
+    @include breakpoint-up(large){
+      width: 70%;
+      gap: rem(24);
+    }
+
+    @include breakpoint-up(xlarge){
+      gap: 3rem;
+    }
+    
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__line {
+    position: relative;
+    border: rem(1) solid $lightgrey;
+    border-radius: 999px;
+
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include breakpoint-up(large){
+        left: 92%;
+      }
+
+      @include breakpoint-up(xlarge){
+        left: 93.25%;
+      }
+    }
+
+    &::before {
+      background-color: $purple;
+      padding: rem(30);
+      border-radius: rem(99);
+
+      @include breakpoint-up(medium){
+        padding: rem(48);
+      }
+
+      @include breakpoint-up(large){
+        padding: rem(55);
+      }
+
+      @include breakpoint-up(xlarge){
+        padding: rem(60);
+      }
+    }
+
+    &::after {
+      background-image: url('/images/icon-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: rem(15);
+
+      @include breakpoint-up(medium){
+        padding: rem(24);
+      }
+    }
+  }
+}

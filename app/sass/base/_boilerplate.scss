@@ -1,0 +1,63 @@
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+@use "../util/fonts" as *;
+@use "../util/functions" as *;
+@use "../util/breakpoints" as *;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  min-width: rem(320);
+  max-width: rem(1440);
+  margin: 0 auto;
+  background-color: $offwhite;
+  font-family: $font-primary;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+p {
+  font-size: rem(50);
+  font-weight: $font-bold;
+  font-style: italic;
+  line-height: 1.2;
+
+  @include breakpoint-up(medium){
+    font-size: rem(88);
+  }
+
+  @include breakpoint-up(xlarge){
+    font-size: rem(118.4);
+  }
+}
+
+label {
+  font-size: rem(14);
+  margin-bottom: rem(10);
+  letter-spacing: rem(1.5);
+  color: $smokegrey;
+  font-weight: $font-bold;
+
+  @include breakpoint-up(medium){
+    font-size: rem(18);
+  }
+}
+
+span {
+  color: $purple;
+}
