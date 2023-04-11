@@ -11,14 +11,28 @@ html {
 
 body {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  align-items: center;
   min-height: 100vh;
-  min-width: 20rem;
-  max-width: 90rem;
+  min-width: 23.4375em;
+  max-width: 87.5em;
   margin: 0 auto;
   background-color: #f0f0f0;
   font-family: "Poppins", sans-serif;
+}
+@media (min-width: 43.75em) {
+  body {
+    width: 80%;
+  }
+}
+@media (min-width: 56.25em) {
+  body {
+    width: 65%;
+  }
+}
+@media (min-width: 87.5em) {
+  body {
+    width: 50%;
+  }
 }
 
 a, a:visited, a:active {
@@ -26,7 +40,7 @@ a, a:visited, a:active {
 }
 
 p {
-  font-size: 3.125rem;
+  font-size: 3.35rem;
   font-weight: 700;
   font-style: italic;
   line-height: 1.2;
@@ -36,15 +50,15 @@ p {
     font-size: 5.5rem;
   }
 }
-@media (min-width: 90em) {
+@media (min-width: 56.25em) {
   p {
-    font-size: 7.4rem;
+    font-size: 5rem;
   }
 }
 
 label {
   font-size: 0.875rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.3125rem;
   letter-spacing: 0.09375rem;
   color: #716f6f;
   font-weight: 700;
@@ -62,32 +76,24 @@ span {
 .calculator {
   display: flex;
   flex-direction: column;
-  max-width: 20em;
   background-color: #ffffff;
-  margin-top: 6.25rem;
-  margin-bottom: 6.25rem;
-  border-radius: 1.875rem 1.875rem 8.75rem 1.875rem;
+  border-radius: 1.875rem 1.875rem 6.25rem 1.875rem;
+  margin-inline: 1.125rem;
   padding: 3rem 1.5rem;
-  gap: 4rem;
+  gap: 3.5rem;
+  max-width: 63rem;
 }
 @media (min-width: 43.75em) {
   .calculator {
-    gap: 5rem;
-    max-width: 37.5rem;
+    margin-inline: 0;
+    gap: 3.75rem;
     padding: 3.75rem;
   }
 }
 @media (min-width: 56.25em) {
   .calculator {
-    max-width: none;
-    width: 50em;
-    padding: 4rem;
-  }
-}
-@media (min-width: 90em) {
-  .calculator {
-    width: 65em;
-    padding: 4.25rem;
+    gap: 0;
+    padding: 2.8rem;
   }
 }
 .calculator__form {
@@ -96,76 +102,53 @@ span {
 }
 @media (min-width: 43.75em) {
   .calculator__form {
-    gap: 2rem;
+    gap: 1.8rem;
   }
 }
 @media (min-width: 56.25em) {
   .calculator__form {
-    width: 70%;
-    gap: 1.5rem;
-  }
-}
-@media (min-width: 90em) {
-  .calculator__form {
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 .calculator__form div {
   display: flex;
   flex-direction: column;
 }
-.calculator__line {
+@media (min-width: 56.25em) {
+  .calculator__form div {
+    width: 20%;
+  }
+}
+.calculator__logo-container {
   position: relative;
-  border: 0.0625rem solid #dbdbdb;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
 }
-.calculator__line::before, .calculator__line::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.calculator__logo-container .line {
+  width: 100%;
+  height: 1px;
+  background-color: #dbdbdb;
 }
-@media (min-width: 56.25em) {
-  .calculator__line::before, .calculator__line::after {
-    left: 92%;
-  }
-}
-@media (min-width: 90em) {
-  .calculator__line::before, .calculator__line::after {
-    left: 93.25%;
-  }
-}
-.calculator__line::before {
+.calculator__logo-container .logo {
   background-color: #854dff;
-  padding: 1.875rem;
-  border-radius: 6.1875rem;
+  border-radius: 999px;
+  padding: 20px;
+}
+@media (max-width: 56.24875em) {
+  .calculator__logo-container .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.calculator__logo-container .logo img {
+  width: 30px;
+  height: 25px;
 }
 @media (min-width: 43.75em) {
-  .calculator__line::before {
-    padding: 3rem;
-  }
-}
-@media (min-width: 56.25em) {
-  .calculator__line::before {
-    padding: 3.4375rem;
-  }
-}
-@media (min-width: 90em) {
-  .calculator__line::before {
-    padding: 3.75rem;
-  }
-}
-.calculator__line::after {
-  background-image: url("/images/icon-arrow.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0.9375rem;
-}
-@media (min-width: 43.75em) {
-  .calculator__line::after {
-    padding: 1.5rem;
+  .calculator__logo-container .logo img {
+    width: 40px;
+    height: 35px;
   }
 }
 
@@ -192,10 +175,5 @@ input::placeholder {
 @media (min-width: 56.25em) {
   input {
     font-size: 2rem;
-  }
-}
-@media (min-width: 90em) {
-  input {
-    font-size: 3rem;
   }
 }/*# sourceMappingURL=main.css.map */

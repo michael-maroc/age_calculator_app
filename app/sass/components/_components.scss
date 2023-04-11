@@ -21,10 +21,6 @@ input {
   }
 
   @include breakpoint-up(large){
-    font-size: $font-size;
-  }
-
-  @include breakpoint-up(xlarge){
-    font-size: rem(48);
+    font-size: rem(32);
   }
 }
