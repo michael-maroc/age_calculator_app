@@ -55,6 +55,11 @@ p {
     font-size: 5rem;
   }
 }
+@media (min-width: 87.5em) {
+  p {
+    font-size: 6rem;
+  }
+}
 
 label {
   font-size: 0.875rem;
@@ -71,6 +76,15 @@ label {
 
 span {
   color: #854dff;
+}
+
+button, .button {
+  border: none;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: #ff5757;
 }
 
 .calculator {
@@ -116,8 +130,15 @@ span {
 }
 @media (min-width: 56.25em) {
   .calculator__form div {
-    width: 20%;
+    width: 22%;
   }
+}
+.calculator__form .error-msg {
+  color: #ff5757;
+  font-size: 0.75rem;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
 }
 .calculator__logo-container {
   position: relative;
@@ -129,24 +150,24 @@ span {
   height: 1px;
   background-color: #dbdbdb;
 }
-.calculator__logo-container .logo {
+.calculator__logo-container .btn {
   background-color: #854dff;
   border-radius: 999px;
   padding: 20px;
 }
 @media (max-width: 56.24875em) {
-  .calculator__logo-container .logo {
+  .calculator__logo-container .btn {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-.calculator__logo-container .logo img {
+.calculator__logo-container .btn img {
   width: 30px;
   height: 25px;
 }
 @media (min-width: 43.75em) {
-  .calculator__logo-container .logo img {
+  .calculator__logo-container .btn img {
     width: 40px;
     height: 35px;
   }
@@ -160,6 +181,7 @@ input {
   border: 0.0625rem solid #dbdbdb;
   padding: 0.75rem 0 0.75rem 0.75rem;
   font-family: unset;
+  margin-bottom: 0.3125rem;
 }
 input::-moz-placeholder {
   color: #716f6f;

@@ -55,6 +55,10 @@ p {
   @include breakpoint-up(large){
     font-size: rem(80);
   }
+
+  @include breakpoint-up(xlarge){
+    font-size: rem(96);
+  }
 }
 
 label {
@@ -71,4 +75,13 @@ label {
 
 span {
   color: $purple;
+}
+
+button, .button {
+  border: none;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: $lightred;
 }
