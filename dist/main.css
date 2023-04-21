@@ -47,11 +47,6 @@ p {
 }
 @media (min-width: 43.75em) {
   p {
-    font-size: 5.5rem;
-  }
-}
-@media (min-width: 56.25em) {
-  p {
     font-size: 5rem;
   }
 }
@@ -94,13 +89,11 @@ button, .button {
   border-radius: 1.875rem 1.875rem 6.25rem 1.875rem;
   margin-inline: 1.125rem;
   padding: 3rem 1.5rem;
-  gap: 3.5rem;
   max-width: 63rem;
 }
 @media (min-width: 43.75em) {
   .calculator {
     margin-inline: 0;
-    gap: 3.75rem;
     padding: 3.75rem;
   }
 }
@@ -110,30 +103,30 @@ button, .button {
     padding: 2.8rem;
   }
 }
-.calculator__form {
+.calculator__form__container {
   display: flex;
   gap: 1rem;
 }
 @media (min-width: 43.75em) {
-  .calculator__form {
+  .calculator__form__container {
     gap: 1.8rem;
   }
 }
 @media (min-width: 56.25em) {
-  .calculator__form {
+  .calculator__form__container {
     gap: 2rem;
   }
 }
-.calculator__form div {
+.calculator__form__container div {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 56.25em) {
-  .calculator__form div {
+  .calculator__form__container div {
     width: 22%;
   }
 }
-.calculator__form .error-msg {
+.calculator__form__container .error-msg {
   color: #ff5757;
   font-size: 0.75rem;
   font-weight: 300;
@@ -144,6 +137,12 @@ button, .button {
   position: relative;
   display: flex;
   align-items: center;
+}
+@media (max-width: 56.24875em) {
+  .calculator__logo-container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 }
 .calculator__logo-container .line {
   width: 100%;

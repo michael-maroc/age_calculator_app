@@ -13,32 +13,35 @@
   </head>
   <body>
     <section class="calculator">
-      <form class="calculator__form">
-        <div>
-          <label id="dayLabel">DAY</label>
-          <input id="dayInput" type="number" placeholder="DD">
-          <span class="error-msg"></span>
+      <form id="form" class="calculator__form">
+        <div class="calculator__form__container">
+          <div>
+            <label id="dayLabel">DAY</label>
+            <input id="dayInput" type="number" placeholder="DD">
+            <span class="dayErrMsg error-msg"></span>
+          </div>
+          
+          <div>
+            <label id="monthLabel">MONTH</label>
+            <input id="monthInput" type="number" placeholder="MM">
+            <span class="monthErrMsg error-msg"></span>
+          </div>
+          
+          <div>
+            <label id="yearLabel">YEAR</label>
+            <input id="yearInput" type="number" placeholder="YYYY">
+            <span class="yearErrMsg error-msg"></span>
+          </div>
         </div>
         
-        <div>
-          <label id="monthLabel">MONTH</label>
-          <input id="monthInput" type="number" placeholder="MM">
-          <span class="error-msg"></span>
-        </div>
-        
-        <div>
-          <label id="yearLabel">YEAR</label>
-          <input id="yearInput" type="number" placeholder="YYYY">
-          <span class="error-msg"></span>
+        <div class="calculator__logo-container">
+          <div class="line"></div>
+          <button class="btn">
+            <img src="./images/icon-arrow.svg" alt="arrow">
+          </button>
         </div>
       </form>
 
-      <div class="calculator__logo-container">
-        <div class="line"></div>
-        <button class="btn">
-          <img src="./images/icon-arrow.svg" alt="arrow">
-        </button>
-      </div>
 
       <div class="calculator__values">
         <p><span id="yearsValue">--</span> years</p>

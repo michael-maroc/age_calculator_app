@@ -10,12 +10,10 @@
   border-radius: rem(30) rem(30) rem(100) rem(30);
   margin-inline: rem(18);
   padding: rem(48) rem(24);
-  gap: 3.5rem;
   max-width: rem(1008);
 
   @include breakpoint-up(medium){
     margin-inline: 0;
-    gap: rem(60);
     padding: rem(60);
   }
 
@@ -24,7 +22,7 @@
     padding: rem(44.8);
   }
 
-  &__form {
+  &__form__container {
     display: flex;
     gap: rem(16);
 
@@ -35,7 +33,7 @@
     @include breakpoint-up(large){
       gap: rem(32);
     }
-    
+
     div {
       display: flex;
       flex-direction: column;
@@ -58,6 +56,11 @@
     position: relative;
     display: flex;
     align-items: center;
+
+    @include breakpoint-down(medium){
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
 
     & .line {
       width: 100%;

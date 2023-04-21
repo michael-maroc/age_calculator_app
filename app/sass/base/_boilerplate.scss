@@ -49,10 +49,6 @@ p {
   line-height: 1.2;
 
   @include breakpoint-up(medium){
-    font-size: rem(88);
-  }
-
-  @include breakpoint-up(large){
     font-size: rem(80);
   }
 
