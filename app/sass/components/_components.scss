@@ -9,19 +9,19 @@ input {
   width: 100%;
   border-radius: rem(6);
   border: rem(1) solid $lightgrey;
-  padding:  rem(12) 0 rem(12) rem(12);
+  padding: rem(12) 0 rem(12) rem(12);
   font-family: unset;
   margin-bottom: rem(5);
 
+  @include breakpoint-up(medium){
+    font-size: rem(30);
+  }
+
+  @include breakpoint-up(xlarge){
+    font-size: rem(40);
+  }
+
   &::placeholder {
     color: $smokegrey;
-  }
-
-  @include breakpoint-up(medium){
-    font-size: rem(36);
-  }
-
-  @include breakpoint-up(large){
-    font-size: rem(32);
   }
 }

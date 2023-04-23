@@ -18,9 +18,10 @@ html {
 body {
   display: flex;
   align-items: center;
-  min-height: 100vh;
-  min-width: em(375);
+  justify-content: center;
+  min-width: rem(320);
   max-width: em(1400);
+  min-height: 100vh;
   margin: 0 auto;
   background-color: $offwhite;
   font-family: $font-primary;
@@ -30,11 +31,7 @@ body {
   }
 
   @include breakpoint-up(large){
-    width: 65%;
-  }
-
-  @include breakpoint-up(xlarge){
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -43,24 +40,16 @@ a, a:visited, a:active {
 }
 
 p {
-  font-size: rem(53.6);
+  font-size: clamp(rem(20), rem(22) + 8vw, rem(96));
   font-weight: $font-bold;
   font-style: italic;
   line-height: 1.2;
-
-  @include breakpoint-up(medium){
-    font-size: rem(80);
-  }
-
-  @include breakpoint-up(xlarge){
-    font-size: rem(96);
-  }
 }
 
 label {
-  font-size: rem(14);
+  font-size: rem(12);
   margin-bottom: rem(5);
-  letter-spacing: rem(1.5);
+  letter-spacing: rem(1.2);
   color: $smokegrey;
   font-weight: $font-bold;
 

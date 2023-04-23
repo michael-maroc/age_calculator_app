@@ -12,9 +12,10 @@ html {
 body {
   display: flex;
   align-items: center;
-  min-height: 100vh;
-  min-width: 23.4375em;
+  justify-content: center;
+  min-width: 20rem;
   max-width: 87.5em;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: #f0f0f0;
   font-family: "Poppins", sans-serif;
@@ -26,12 +27,7 @@ body {
 }
 @media (min-width: 56.25em) {
   body {
-    width: 65%;
-  }
-}
-@media (min-width: 87.5em) {
-  body {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -40,26 +36,16 @@ a, a:visited, a:active {
 }
 
 p {
-  font-size: 3.35rem;
+  font-size: clamp(1.25rem, 1.375rem + 8vw, 6rem);
   font-weight: 700;
   font-style: italic;
   line-height: 1.2;
 }
-@media (min-width: 43.75em) {
-  p {
-    font-size: 5rem;
-  }
-}
-@media (min-width: 87.5em) {
-  p {
-    font-size: 6rem;
-  }
-}
 
 label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   margin-bottom: 0.3125rem;
-  letter-spacing: 0.09375rem;
+  letter-spacing: 0.075rem;
   color: #716f6f;
   font-weight: 700;
 }
@@ -87,20 +73,12 @@ button, .button {
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 1.875rem 1.875rem 6.25rem 1.875rem;
-  margin-inline: 1.125rem;
   padding: 3rem 1.5rem;
-  max-width: 63rem;
+  max-width: 52.5rem;
 }
 @media (min-width: 43.75em) {
   .calculator {
-    margin-inline: 0;
     padding: 3.75rem;
-  }
-}
-@media (min-width: 56.25em) {
-  .calculator {
-    gap: 0;
-    padding: 2.8rem;
   }
 }
 .calculator__form__container {
@@ -108,11 +86,6 @@ button, .button {
   gap: 1rem;
 }
 @media (min-width: 43.75em) {
-  .calculator__form__container {
-    gap: 1.8rem;
-  }
-}
-@media (min-width: 56.25em) {
   .calculator__form__container {
     gap: 2rem;
   }
@@ -182,19 +155,19 @@ input {
   font-family: unset;
   margin-bottom: 0.3125rem;
 }
+@media (min-width: 43.75em) {
+  input {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 87.5em) {
+  input {
+    font-size: 2.5rem;
+  }
+}
 input::-moz-placeholder {
   color: #716f6f;
 }
 input::placeholder {
   color: #716f6f;
-}
-@media (min-width: 43.75em) {
-  input {
-    font-size: 2.25rem;
-  }
-}
-@media (min-width: 56.25em) {
-  input {
-    font-size: 2rem;
-  }
 }/*# sourceMappingURL=main.css.map */
