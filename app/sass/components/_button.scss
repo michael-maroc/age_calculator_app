@@ -1,0 +1,19 @@
+@use "../abstracts/colors" as *;
+@use "../util/breakpoints" as *;
+
+.btn {
+  background-color: $purple;
+  border-radius: 999px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #000000;
+  }
+  @include breakpoint-down(medium){
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

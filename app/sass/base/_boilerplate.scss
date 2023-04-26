@@ -1,6 +1,5 @@
-@use "../base/colors" as *;
+@use "../abstracts/colors" as *;
 @use "../base/typography" as *;
-@use "../util/fonts" as *;
 @use "../util/functions" as *;
 @use "../util/breakpoints" as *;
 
@@ -58,13 +57,38 @@ label {
   }
 }
 
-span {
-  color: $purple;
+input {
+  font-size: rem(20);
+  font-weight: 800;
+  width: 100%;
+  border-radius: rem(6);
+  border: rem(1) solid $lightgrey;
+  padding: rem(12) 0 rem(12) rem(12);
+  font-family: unset;
+  margin-bottom: rem(5);
+  caret-color: $purple;
+  
+
+  @include breakpoint-up(medium){
+    font-size: rem(30);
+  }
+
+  @include breakpoint-up(xlarge){
+    font-size: rem(40);
+  }
+
+  &::placeholder {
+    color: $smokegrey;
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    border-color: $purple;
+  }
 }
 
-button, .button {
-  border: none;
-  cursor: pointer;
+span {
+  color: $purple;
 }
 
 .error-msg {

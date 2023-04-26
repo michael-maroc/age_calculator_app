@@ -1,4 +1,4 @@
-@use "../base/colors" as *;
+@use "../abstracts/colors" as *;
 @use "../base/typography" as *;
 @use "../util/functions" as *;
 @use "../util/breakpoints" as *;
@@ -57,25 +57,13 @@
       background-color: $lightgrey;
     }
 
-    & .btn {
-      background-color: $purple;
-      border-radius: 999px;
-      padding: 20px;
-      
-      @include breakpoint-down(medium){
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      img {
-        width: 30px;
-        height: 25px;
-
-        @include breakpoint-up(medium){
-          width: 40px;
-          height: 35px;
-        }
+    img {
+      width: 30px;
+      height: 25px;
+  
+      @include breakpoint-up(medium){
+        width: 40px;
+        height: 35px;
       }
     }
   }
